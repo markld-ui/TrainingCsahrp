@@ -1,6 +1,6 @@
 ﻿namespace ListOfNotes
 {
-    partial class Form1
+    partial class MainWindow
     {
         /// <summary>
         ///  Required designer variable.
@@ -74,7 +74,6 @@
             label_name.Size = new Size(120, 39);
             label_name.TabIndex = 2;
             label_name.Text = "Заметки";
-            label_name.Click += label1_name_Click;
             // 
             // listBoxNotes
             // 
@@ -85,11 +84,11 @@
             listBoxNotes.ItemHeight = 15;
             listBoxNotes.Location = new Point(12, 172);
             listBoxNotes.Name = "listBoxNotes";
+            listBoxNotes.ScrollAlwaysVisible = true;
             listBoxNotes.Size = new Size(120, 570);
             listBoxNotes.TabIndex = 3;
             listBoxNotes.SelectedIndexChanged += listBoxNotes_SelectedIndexChanged;
-            listBoxNotes.ControlAdded += listBoxNotes_ControlAdded;
-            listBoxNotes.ControlRemoved += listBoxNotes_ControlRemoved;
+            listBoxNotes.MouseDoubleClick += listBoxNotes_MouseDoubleClick;
             // 
             // comboBoxCategories
             // 
@@ -114,7 +113,6 @@
             labelCategories.Size = new Size(102, 25);
             labelCategories.TabIndex = 5;
             labelCategories.Text = "Категории";
-            labelCategories.Click += labelCategories_Click;
             // 
             // textBoxTitleNote
             // 
@@ -172,7 +170,7 @@
             MinimumSize = new Size(1200, 800);
             Name = "Form1";
             Text = "Notes";
-            Load += Form1_Load;
+            Load += MainWindow_Load;
             ResumeLayout(false);
             PerformLayout();
         }
